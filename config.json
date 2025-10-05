@@ -1,0 +1,20 @@
+{
+  "BOT_TOKEN": "REPLACE_WITH_YOUR_BOT_TOKEN",
+  "CHANNEL_ID": "@your_channel_or_chat_id",
+  "SERVER_URL": "http://localhost:8000",
+  "ffmpeg_cmd": [
+    "ffmpeg",
+    "-f",
+    "pulse",
+    "-i",
+    "default",
+    "-vn",
+    "-acodec",
+    "libmp3lame",
+    "-b:a",
+    "128k",
+    "-f",
+    "mp3",
+    "pipe:1"
+  ]
+}

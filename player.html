@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DJ Live Player</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;padding:12px;text-align:center}
+    #track{font-weight:600;margin-bottom:6px}
+    audio{width:100%;margin-top:10px}
+    #vol{width:100%}
+    .note{font-size:12px;color:#666;margin-top:8px}
+  </style>
+</head>
+<body>
+  <h2>🎧 DJ Live</h2>
+  <div id="track">Connecting…</div>
+  <audio id="player" controls autoplay></audio>
+  <div style="margin-top:8px">
+    Volume: <input id="vol" type="range" min="0" max="1" step="0.01" value="1">
+  </div>
+  <div class="note">If audio does not start, try opening in a browser tab (autoplay policies).</div>
+  <script>
+    const SERVER = "";
+    const audio = document.getElementById('player');
+    audio.crossOrigin = "anonymous";
+    // Set source to the same origin as the player was served from
+    audio.src = window.location.origin + "/stream";
+    const vol = document.getElementById('vol');
+    vol.addEventListener('input', ()=> audio.volume = vol.value);
+    // poll metadata
+    async function updateMeta(){
+      try{
+        const res = await fetch('/metadata');
+        if(res.ok){
+          const j = await res.json();
+          document.getElementById('track').textContent = j.song || "Live DJ";
+        }
+      }catch(e){}
+    }
+    setInterval(updateMeta,2000);
+    updateMeta();
+  </script>
+</body>
+</html>
