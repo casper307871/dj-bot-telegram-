@@ -1,0 +1,28 @@
+REDISTRIBUTION & ANTI-CLONING ADDENDUM — Edward Project
+
+Effective: 2025 Owner: Casper of the WC3.0, the Admin Trainer
+
+Summary:
+
+The Edward Software is proprietary. Redistribution, resale, public hosting, copying, and cloning are strictly prohibited.
+Reverse-engineering, decompilation, disassembly, or any attempt to replicate the architecture or behavior is forbidden.
+Unauthorized access, scraping, or bulk extraction of user or system data is prohibited.
+Violations will result in immediate termination of license and may be subject to injunctive relief and monetary damages.
+Key Terms (high-level):
+
+DO NOT redistribute copies (source or binary) of this software to third parties.
+DO NOT create forks, clones, or derivative projects intended to replicate Edward's unique functionality.
+DO NOT publicly post or share internal documentation, build scripts, credentials, or configuration that enable replication.
+If you are an authorised integrator or partner and need to redistribute components, obtain a signed written distribution agreement from the Owner.
+Report any suspected leaks, suspicious forks, or cloned projects to the Owner immediately.
+Recommended repository measures (operational):
+
+Include this Addendum and the full LICENSE at repo root.
+Add contributor and collaborator agreements requiring confidentiality and no-cloning.
+Use code obfuscation / build-time protections where appropriate.
+Apply automated monitoring to detect public forks and suspicious republishing.
+Keep any deployment keys, API keys, or secrets out of repo (use environment stores / secret managers).
+Enforcement:
+
+Owner reserves the right to pursue injunctive relief and legal remedies against any party who clones, distributes, or otherwise misuses the Software.
+This addendum is part of the Edward Software License and is intended to summarize and reinforce the anti-redistribution and anti-cloning protections.
